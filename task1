@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>
+            Calculator
+        </title>
+        <script>
+            function clearScreen(){
+                var x=document.getElementById("b1");
+                document.getElementById("demo").value=" ";
+            }
+            function cal(val){
+                document.getElementById("demo").value+=val;
+            }
+            function calculate(){
+                var p = document.getElementById("demo").value;
+                var q = eval(p);
+                document.getElementById("demo").value=q;
+            }
+        </script>
+        <style>
+            .p{
+                margin: 50px 500px;
+            }
+            .q{
+                padding: 10px 20px 10px 20px;
+                color: black;
+                background-color:darkgrey;
+            }
+            .c{
+                padding: 10px 20px 10px 20px;
+                background-color: brown;
+            }
+            .i{
+                padding: 10px 20px 10px 20px;
+                background-color: aliceblue;  
+            }
+        </style>
+    </head>
+    <body>
+        <div class="p">
+            <table style="text-align:center;background-color: azure;" border="5">
+                <caption><h2>CALCULATOR</h2></caption>
+            <tr>
+                <td colspan="3"><input class="i" type="text" id="demo" ></td>
+                <td><button class="c" id="b1" onclick="clearScreen()">Clear</button></td>
+            </tr>
+            <tr>
+                <td><button  class="q"  id="b1" value="1" onclick="cal(this.value)">1</button></td>
+                <td><button  class="q" id="b1" value="2" onclick="cal(this.value)">2</button></td>
+                <td><button  class="q" id="b1" value="3" onclick="cal(this.value)">3</button></td>
+                <td><button  class="q"  id="b1" value="+" onclick="cal(this.value)">+</button></td>
+            </tr>
+            <tr>
+                <td><button  class="q" id="b1" value="4" onclick="cal(this.value)">4</button></td>
+                <td><button  class="q" id="b1" value="5" onclick="cal(this.value)">5</button></td>
+                <td><button  class="q" id="b1" value="6" onclick="cal(this.value)">6</button></td>
+                <td><button  class="q" id="b1" value="-" onclick="cal(this.value)">-</button></td>
+            </tr>
+            <tr>
+                <td><button  class="q" id="b1" value="7" onclick="cal(this.value)">7</button></td>
+                <td><button  class="q" id="b1" value="8" onclick="cal(this.value)">8</button></td>
+                <td><button  class="q" id="b1" value="9" onclick="cal(this.value)">9</button></td>
+                <td><button  class="q" id="b1" value="*" onclick="cal(this.value)">x</button></td>
+            </tr>
+            <tr>
+                <td><button  class="q" id="b1" value="." onclick="cal(this.value)">.</button></td>
+                <td><button  class="q" id="b1" value="0" onclick="cal(this.value)">0</button></td>
+                <td><button  class="q" id="b1" value="=" onclick="calculate()">=</button></td>
+                <td><button  class="q" id="b1" value="/" onclick="cal(this.value)">/</button></td>
+            </tr>
+        </table>
+    </div>
+    </body>
+</html>
